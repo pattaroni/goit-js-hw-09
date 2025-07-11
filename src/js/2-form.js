@@ -29,12 +29,11 @@ if (savedData) {
 
 form.addEventListener('submit', evt => {
   evt.preventDefault();
-  if (!validator.isEmail(email.value)) {
-    alert('Invalid email!');
-  }
   if (formData.email === '' || formData.message === '') {
     alert('Fill please all fields');
     return;
+  } else if (!validator.isEmail(email.value)) {
+    alert('Invalid email!');
   } else {
     console.log(formData);
     localStorage.removeItem(localStorageKey);
