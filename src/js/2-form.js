@@ -34,6 +34,7 @@ form.addEventListener('submit', evt => {
     return;
   } else if (!validator.isEmail(email.value)) {
     alert('Invalid email!');
+    return;
   } else {
     console.log(formData);
     localStorage.removeItem(localStorageKey);
