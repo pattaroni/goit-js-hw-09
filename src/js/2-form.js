@@ -18,7 +18,7 @@ if (savedData) {
   formData.email = savedData.email || '';
   formData.message = savedData.message || '';
 }
-~form.addEventListener('input', evt => {
+form.addEventListener('input', evt => {
   if (evt.target.nodeName === 'INPUT') {
     formData.email = evt.target.value;
   } else if (evt.target.nodeName === 'TEXTAREA') {
